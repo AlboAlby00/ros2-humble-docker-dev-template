@@ -51,7 +51,6 @@ elif [[ "$should_run" == true ]]; then
                --rm \
                --net=host \
                --privileged \
-               --gpus=all \
                -e DISPLAY=$DISPLAY \
                -e PYTHONBUFFERED=1 \
                -v /etc/timezone:/etc/timezone:ro \

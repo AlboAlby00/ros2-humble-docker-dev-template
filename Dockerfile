@@ -41,7 +41,22 @@ RUN apt-get update && apt-get install -y \
     tmux \
     wget \
     xorg-dev \
-    zsh
+    zsh 
+
+# add here other packages you need to install
+RUN apt-get install -y ros-humble-rtabmap
+RUN apt-get install -y ros-humble-rtabmap-ros
+RUN apt-get install -y ros-humble-controller-manager
+RUN apt-get install -y ros-humble-gazebo-ros2-control
+RUN apt-get install -y ros-humble-joint-state-broadcaster
+RUN apt-get install -y ros-humble-velocity-controllers
+RUN apt-get install -y ros-humble-nav2-msgs
+RUN apt-get install -y ros-humble-nav2-bringup
+RUN apt-get install -y ros-humble-navigation2
+RUN apt-get install -y ros-humble-nav2-smac-planner
+RUN apt-get install -y ros-humble-nav2-regulated-pure-pursuit-controller
+RUN apt-get install -y ros-humble-joy-linux
+RUN apt-get install -y ros-humble-urg-node
 
 RUN pip3 install setuptools==58.2.0
 
@@ -79,4 +94,4 @@ RUN echo "bashcompinit" >> /root/.zshrc
 RUN echo 'eval "$(register-python-argcomplete3 ros2)"' >> /root/.zshrc
 RUN echo 'eval "$(register-python-argcomplete3 colcon)"' >> /root/.zshrc
 
-CMD [ "tmuxinator", "start", "-p", "/root/.session.yml" ]
+# CMD [ "tmuxinator", "start", "-p", "/root/.session.yml" ]
