@@ -57,6 +57,8 @@ RUN apt-get install -y ros-humble-nav2-smac-planner
 RUN apt-get install -y ros-humble-nav2-regulated-pure-pursuit-controller
 RUN apt-get install -y ros-humble-joy-linux
 RUN apt-get install -y ros-humble-urg-node
+RUN apt-get install -y ros-humble-tf-transformations
+RUN apt-get install -y ros-humble-position-controllers
 
 RUN pip3 install setuptools==58.2.0
 
